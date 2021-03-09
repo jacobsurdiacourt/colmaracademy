@@ -19,6 +19,11 @@ h4 {
     font-weight: 300;
 }
 
+p {
+    font-size: 16px;
+    font-weight: 300;
+}
+
 body {
     margin: 0;
 }
@@ -160,6 +165,7 @@ header a:hover {
         .author {
             position: relative;
             bottom: -16px;
+            font-weight: 400;
 }
 
 .blog {
@@ -170,7 +176,7 @@ header a:hover {
     border-left: 1px solid grey;
 }
 
-        .container {
+        .blog .container {
             padding: 16px;
             display: flex;
             align-items: center;
@@ -219,3 +225,42 @@ header a:hover {
 
 /* Domains Section */
 
+.domains-section {
+    background-color: grey;
+    position: relative;
+    top: 64px;
+}
+
+.domains-section h1 {
+    padding-top: 32px;
+    padding-bottom: 0;
+    margin: 0;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.domains {
+    display: flex;
+    justify-content: center;
+    margin: 16px 72px;
+    flex-wrap: wrap;
+}
+
+.domains .container {
+    width: 30%;
+    background-color: white;
+    margin: 16px;
+}
+
+.domains .domain-image {
+    width: 100%;
+    height: auto;
+}
+
+.domains h3, .domains p {
+    padding: 8px 16px 
+}
+
+.domains a:hover {
+    opacity: 0.5;
+}
