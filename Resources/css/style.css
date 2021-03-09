@@ -1,0 +1,64 @@
+/* Universal styles */
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+h3 {
+    font-size: 32px;
+    font-weight: 400;
+}
+
+
+/* Navigation Bar */
+
+header {
+    position: fixed;
+    top: 0;
+    height: 64px;
+    width: 100%;
+    background-color: #FFFFFF;
+    padding: 0 24px;
+    display: flex;
+    justify-content: flex-end;
+    box-sizing: border-box;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    height: 64px;
+    position: absolute;
+    left: 0;
+}
+
+.logo {
+    height: 80%;
+}
+
+.light {
+    font-weight: 100;
+}
+
+nav {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+ul li {
+    display: inline;
+    font-size: 16px;
+    margin-left: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: grey;
+}
+
+/* Welcome section */
