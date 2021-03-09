@@ -36,6 +36,7 @@ header {
     display: flex;
     justify-content: flex-end;
     box-sizing: border-box;
+    z-index: 100;
 }
 
 .title {
@@ -79,17 +80,22 @@ header a:hover {
 
 .welcome-section {
     background-color: grey;
-    position: absolute;
+    position: relative;
     top: 64px;
     display: flex;
     justify-content: flex-start;
     width: 100%;
 }
 
-.banner {
+.image-container {
     width: 60%;
     height: 100%;
-    margin: 32px 24px;
+    padding: 32px 24px;
+    box-sizing: border-box;
+}
+
+.banner {
+    width: 100%
 }
 
 .content {
@@ -115,4 +121,100 @@ header a:hover {
 .button:hover {
     background-color: dimgray;
 }
+
+/* Information-section */
+
+.information-section {
+    background-color: white;
+    position: relative;
+    top: 64px;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    min-height: 650px;
+    margin: 2px 0;
+}
+
+.main {
+    width: 60%;
+    padding: 32px 24px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+        .main-image {
+            width: 100%;
+            height: auto;
+            margin-bottom: 32px;
+}
+
+        .main h1 {
+            padding: 0;
+            margin: 0;
+}
+
+        .quote {
+            font-weight: 300;
+        }
+
+        .author {
+            position: absolute;
+            bottom: 32px;
+}
+
+.blog {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-left: 1px solid grey;
+}
+
+        .container {
+            padding: 16px;
+            display: flex;
+            align-items: center;
+            align-content: space-around;
+            width: 100%;
+            box-sizing: border-box;
+            max-height: 200px;
+}
+
+        .orientation {
+            border-bottom: 3px double grey;
+}
+
+        .guest-lecture {
+            background-color: grey;
+}
+
+        .blog-image {
+            width: 35%;
+            height: 100%;
+            max-height: 168px;
+}
+
+        .container .content {
+            width: 65%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin: 0 16px;
+}
+
+        .container h3, .container p, .container a {
+            margin: 4px 0;
+            padding: 0;
+}
+        .read-more {
+            color: skyblue;
+            text-decoration: none;
+}
+
+        .read-more:hover {
+            color:darkgrey;
+        }
+
+
+/* Domains Section */
 
