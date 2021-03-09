@@ -4,9 +4,23 @@ html {
     font-family: 'Roboto', sans-serif;
 }
 
+h1 {
+    font-size: 42px;
+    font-weight: 500;
+}
+
 h3 {
     font-size: 32px;
     font-weight: 400;
+}
+
+h4 {
+    font-size: 24px;
+    font-weight: 300;
+}
+
+body {
+    margin: 0;
 }
 
 
@@ -29,7 +43,7 @@ header {
     align-items: center;
     height: 64px;
     position: absolute;
-    left: 0;
+    left: 24px;
 }
 
 .logo {
@@ -57,8 +71,47 @@ a {
     color: black;
 }
 
-a:hover {
+header a:hover {
     color: grey;
 }
 
 /* Welcome section */
+
+.welcome-section {
+    background-color: grey;
+    position: absolute;
+    top: 64px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.banner {
+    width: 60%;
+    height: 100%;
+    margin: 32px 24px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
+    margin: 32px 0;
+}
+
+.button {
+    background-color: darkslategray;
+    text-align: center;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: white;
+}
+
+.content h4, .content h1, .content a {
+    margin: 12px 0;
+}
+
+.button:hover {
+    background-color: dimgray;
+}
+
