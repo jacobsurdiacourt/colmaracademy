@@ -24,6 +24,11 @@ p {
     font-weight: 300;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 body {
     margin: 0;
 }
@@ -488,6 +493,7 @@ video {
 .thesis {
     border: none;
 }
+
  .now-and-then a:hover {
      color: grey;
  }
@@ -500,6 +506,10 @@ video {
      background-color: grey;
  }
 
+ .mobile-video {
+     display: none;
+ }
+
  @media only screen and (max-width: 900px) {
     .thesis {
         display: none;
@@ -510,6 +520,12 @@ video {
     .thesis-content .video {
         width: 100%;
         margin: 0 32px;
+    }
+    .mobile-video {
+        display: block;
+    }
+    .desktop-video {
+        display: none;
     }
  }
 
