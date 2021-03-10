@@ -28,10 +28,22 @@ body {
     margin: 0;
 }
 
+@media only screen and (max-width: 900px) {
+    h1 {
+        font-size: 32px;
+    }
+    h3 {
+        font-size: 24px;
+    } 
+    h4 {
+        font-size: 18px;
+    }
+}
+
 
 /* Navigation Bar */
 
-header {
+#header {
     position: fixed;
     top: 0;
     height: 64px;
@@ -44,7 +56,7 @@ header {
     z-index: 100;
 }
 
-.title {
+#header .title {
     display: flex;
     align-items: center;
     height: 64px;
@@ -52,34 +64,74 @@ header {
     left: 24px;
 }
 
-.logo {
+#header .logo {
     height: 80%;
 }
 
-.light {
+#header .light {
     font-weight: 100;
 }
 
-nav {
+#header nav {
     height: 100%;
     display: flex;
     align-items: center;
 }
 
-nav ul li {
+#header nav ul li {
     display: inline;
     font-size: 16px;
     margin-left: 16px;
 }
 
-a {
+#header a {
     text-decoration: none;
     color: black;
 }
 
-header a:hover {
+#header a:hover {
     color: grey;
 }
+
+#mobile-header {
+    display: none;
+}
+
+@media only screen and (max-width: 900px) {
+    #header {
+        display: none;
+    }
+
+    #mobile-header {
+        width: 100%;
+        height: 64px;
+        display: block;
+        align-items: center;
+        position:fixed;
+        top: 0;
+        padding: 0 24px;
+        box-sizing: border-box;
+        z-index: 100;
+        background-color: white;
+    }
+
+    #mobile-header nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 64px;
+        width: 100%;
+    }
+
+    #mobile-header img {
+        height: 80%;
+    }
+}
+
+
+
+
+
 
 /* Welcome section */
 
@@ -125,6 +177,31 @@ header a:hover {
 
 .button:hover {
     background-color: dimgray;
+}
+
+@media only screen and (max-width: 900px) {
+    .welcome-section {
+        background-color: grey;
+        position: relative;
+        top: 64px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .image-container {
+        width: 100%;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        margin: 24px 32px;
+    }
+
 }
 
 /* Information-section */
@@ -194,12 +271,15 @@ header a:hover {
             background-color: grey;
 }
 
-        .blog-image {
+        .blog-image-desktop {
             width: 35%;
             height: 100%;
             min-height: 168px;
             min-width: 168px;
 }
+        .blog-image-mobile {
+            display: none;
+        }
 
         .container .content {
             width: 65%;
@@ -221,6 +301,54 @@ header a:hover {
         .read-more:hover {
             color:darkgrey;
         }
+
+@media only screen and (max-width: 900px) {
+    .main {
+        display: none;
+    }
+    .blog {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 16px 32px;
+        border: none;
+    }
+    .blog .container {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: space-between;
+        width: 100%;
+        box-sizing: border-box;
+        min-height: 0;
+        margin: 32px 0;
+    }
+    .orientation {
+        border: none;
+    }
+
+    .guest-lecture {
+        background-color: white;
+    }
+    .blog-image-desktop {
+        display: none; 
+    }
+    .blog-image-mobile {
+        display: block;
+        width: 100%;
+    }
+    .container .content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 16px;
+        padding-left: 16px;
+}
+
+}
 
 
 /* Domains Section */
@@ -264,11 +392,61 @@ header a:hover {
     padding: 8px 16px 
 }
 
-.domains a:hover {
-    opacity: 0.5;
+.domains a{
+    text-decoration: none;
+    color: black;
 }
 
-/* Thesis section */
+.domains a:hover {
+    opacity: 0.5;
+    color: grey;
+}
+
+@media only screen and (max-width: 900px) {
+    .domains-section {
+        background-color: white;
+        position: relative;
+        top: 64px;
+        width: 100%;
+        border-top: 1px solid grey;
+        border-bottom: 1px solid grey;
+    }
+    .domains {
+        display: flex;
+        justify-content: center;
+        margin: 0 32px;
+        padding: 16px 0;
+        box-sizing: border-box;
+        flex-wrap: wrap;
+    }
+    .domains .container {
+        width: 100%;
+        background-color: grey;
+        margin: 8px 0;
+    }
+
+    .domains .domain-image {
+        display: none;
+    }
+
+    .domains h3 {
+        padding: 24px 16px;
+        text-align: center;
+    }
+    .domains p {
+        display: none;
+    }
+
+    .domains a:hover {
+        opacity: 0.5;
+        color: white;
+    }
+
+
+}
+
+
+/* Thesis section (except for blog -> information section*/
 
 .thesis-section {
     width: 100%;
@@ -322,6 +500,19 @@ video {
      background-color: grey;
  }
 
+ @media only screen and (max-width: 900px) {
+    .thesis {
+        display: none;
+    }
+    .thesis-content h3, .thesis-content p {
+        display: none;
+    }
+    .thesis-content .video {
+        width: 100%;
+        margin: 0 32px;
+    }
+ }
+
  /* Footer */
 
  footer {
@@ -345,5 +536,11 @@ video {
      position: absolute;
      left: 24px;
      font-weight: 200;
+ }
+
+ @media only screen and (max-width: 900px) {
+    footer ul li {
+        display: none;
+    }
  }
 
